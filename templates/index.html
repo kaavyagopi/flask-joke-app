@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="container">
+    <div class="emoji">
+        <img src="static/images/emoji.png" alt="">
+      </div><br>
+      <div class="line"><h1>Here Is A Joke For You</h1>
+        <br></div>
+        <div class="joke">
+            <p spellcheck="false">{{a}}</p><br>
+    
+            </div>
+    <div class="audio">
+        {% if c==0 %}
+        <audio controls><source src="{{url_for('static', filename='mp3/00.mp3')}}" type="audio/mpeg"></audio>
+        {% endif %}
+        {% if c==1 %}
+        <audio controls><source src="{{url_for('static', filename='mp3/01.mp3')}}" type="audio/mpeg"></audio>
+        {% endif %}
+        {% if c==2 %}
+        <audio controls><source src="{{url_for('static', filename='mp3/02.mp3')}}" type="audio/mpeg"></audio>
+        {% endif %}
+        {% if c==3 %}
+        <audio controls><source src="{{url_for('static', filename='mp3/03.mp3')}}" type="audio/mpeg"></audio>
+        {% endif %}
+        {% if c==4 %}
+        <audio controls><source src="{{url_for('static', filename='mp3/04.mp3')}}" type="audio/mpeg"></audio>
+        {% endif %}
+        {% if c==5 %}
+        <audio controls><source src="{{url_for('static', filename='mp3/05.mp3')}}" type="audio/mpeg"></audio>
+        {% endif %}</div>
+</div>
+    
+{% endblock %}
